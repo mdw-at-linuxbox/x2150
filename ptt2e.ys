@@ -1,0 +1,7 @@
+read -sv -I. -DYOSYS=1 ptt2e.v
+prep -nokeepdc
+opt
+#select -module chan1
+share
+#qwp
+show -prefix ptt2e -format dot -stretch ptt2e

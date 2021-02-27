@@ -1,0 +1,4 @@
+read -sv -I . cons2150.v
+hierarchy -simcheck -nodefaults -libdir . -top cons2150
+stat
+show -prefix cons2150 -format dot -stretch cons2150

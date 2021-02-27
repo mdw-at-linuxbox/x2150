@@ -1,0 +1,7 @@
+read -sv -I. -DYOSYS=1 delay1.v
+prep -nokeepdc
+opt
+#select -module chan1
+share
+#qwp
+show -prefix delay1 -format dot -stretch delay1

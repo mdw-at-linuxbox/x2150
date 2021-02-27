@@ -1,0 +1,7 @@
+read -sv -I. -DYOSYS=1 latch1.v
+prep -nokeepdc
+opt
+#select -module chan1
+share
+#qwp
+show -prefix latch1 -format dot -stretch latch1

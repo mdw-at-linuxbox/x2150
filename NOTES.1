@@ -1,0 +1,38 @@
+verilog version of ibm 2150
+bus and tag channel support for ibm 1052 
+
+_tb.v - iverilog testbeds
+.ys	- yosys scripts usually to make dot/pdf
+
+NOTES.1
+	this file
+NOTES.e2tt
+	notes on bad characters made by pdf e2tt logic.
+cfdecode.v
+	1052/2150 function decode ( ebcdic control characters )
+delay1.v
+	configurable delay line; shift signal in time.
+e2tt.v
+	e->tt encodings, bad output
+etoa.h
+	ebcdic to ascii mapping
+latch1.v
+	latch for cons2150
+latch2.v
+	edge sensitive latch for 2821.
+ptt2e.v
+	ptt to e conversion (ptt/8 - bcd)
+ptt12.c
+	sanity test e->tt; opt write out rotates or typeball table (tt2)
+ptt16.c
+	e to tt; testbed for function definition (using b2-b7) (tt2)
+ss2.v
+	single shot - cons2150
+tt2.h
+	e->tt encoding, tt->e; match table order in pdf including permuted +0
+tt3.h
+	e->tt encoding, tt->e; 2025 tilt/rotate order (bad: parity != ptt/8 parity)
+tt3.v
+	e->tt encoding, experiments with "espresso -r"; match pdf table
+x2150.v
+	1052/2150 control unit; interface keyboard/printer to s/360 channel
